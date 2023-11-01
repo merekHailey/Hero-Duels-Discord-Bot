@@ -1,0 +1,118 @@
+import { ProfIndex } from "../Objects/Profile";
+import { ProfList } from "../Global Vars";
+
+
+function ResetFromDuel(ID: string)
+{
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].lock = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].playerNumber = '0';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].tempPartner = '0';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].rollToCompare = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].crit = 'no';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeName = 'YOU FORGOT THE NAME, IDIOT';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeSubname = 'SUBNAME HERE';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeFameMod = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeHp = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeMaxHp = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeDealt_Damage_Type = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeMagicType = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeWeapon = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeDamage_Value = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAc = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeMAc = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeBAc = 0; 
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeSAc = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activePAc = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activestr = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activedex = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activecon = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeint = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activewis = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activecha = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeTBAS = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAbilityTBAS = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeadded_Damage = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAttackMod = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeTempAttackMod = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAbility1 =  'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAbility2 = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAction1 =  'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAction2 = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeOncePerDuel = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeBonusAction = true;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeCondition = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeIsGrappled = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeGrappleIsMaintained = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeIsStealthing = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeStealthIsMaintained = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeIsTripped = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeIsStudied = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeIsStudyPrimed = false;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeDeclaredAction = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeDemoralizeCounter = 0;
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activetype = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeLevel = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeCard = 'no active card';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeOnNextAttack = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAlternativeAttackModType = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeAlternativeDamageMod = 'none';
+    ProfList[ProfIndex(ProfList[ProfIndex(ID)].tempPartner)].activeDisarmCounter = 0;
+
+
+    ProfList[ProfIndex(ID)].lock = 'none';
+    ProfList[ProfIndex(ID)].playerNumber = '0';
+    ProfList[ProfIndex(ID)].tempPartner = '0';
+    ProfList[ProfIndex(ID)].rollToCompare = 0;
+    ProfList[ProfIndex(ID)].crit = 'no';
+    ProfList[ProfIndex(ID)].activeName = 'YOU FORGOT THE NAME, IDIOT';
+    ProfList[ProfIndex(ID)].activeSubname = 'SUBNAME HERE';
+    ProfList[ProfIndex(ID)].activeFameMod = 0;
+    ProfList[ProfIndex(ID)].activeHp = 0;
+    ProfList[ProfIndex(ID)].activeMaxHp = 0;
+    ProfList[ProfIndex(ID)].activeDealt_Damage_Type = 'none';
+    ProfList[ProfIndex(ID)].activeMagicType = 'none';
+    ProfList[ProfIndex(ID)].activeWeapon = 'none';
+    ProfList[ProfIndex(ID)].activeDamage_Value = 0;
+    ProfList[ProfIndex(ID)].activeAc = 0;
+    ProfList[ProfIndex(ID)].activeMAc = 0;
+    ProfList[ProfIndex(ID)].activeBAc = 0; 
+    ProfList[ProfIndex(ID)].activeSAc = 0;
+    ProfList[ProfIndex(ID)].activePAc = 0;
+    ProfList[ProfIndex(ID)].activestr = 0;
+    ProfList[ProfIndex(ID)].activedex = 0;
+    ProfList[ProfIndex(ID)].activecon = 0;
+    ProfList[ProfIndex(ID)].activeint = 0;
+    ProfList[ProfIndex(ID)].activewis = 0;
+    ProfList[ProfIndex(ID)].activecha = 0;
+    ProfList[ProfIndex(ID)].activeTBAS = 0;
+    ProfList[ProfIndex(ID)].activeAbilityTBAS = 'none';
+    ProfList[ProfIndex(ID)].activeadded_Damage = 0;
+    ProfList[ProfIndex(ID)].activeAttackMod = 0;
+    ProfList[ProfIndex(ID)].activeTempAttackMod = 0;
+    ProfList[ProfIndex(ID)].activeAbility1 =  'none';
+    ProfList[ProfIndex(ID)].activeAbility2 = 'none';
+    ProfList[ProfIndex(ID)].activeAction1 =  'none';
+    ProfList[ProfIndex(ID)].activeAction2 = 'none';
+    ProfList[ProfIndex(ID)].activeOncePerDuel = 'none';
+    ProfList[ProfIndex(ID)].activeBonusAction = true;
+    ProfList[ProfIndex(ID)].activeCondition = 'none';
+    ProfList[ProfIndex(ID)].activeIsGrappled = false;
+    ProfList[ProfIndex(ID)].activeGrappleIsMaintained = false;
+    ProfList[ProfIndex(ID)].activeIsStealthing = false;
+    ProfList[ProfIndex(ID)].activeStealthIsMaintained = false;
+    ProfList[ProfIndex(ID)].activeIsTripped = false;
+    ProfList[ProfIndex(ID)].activeIsStudied = false;
+    ProfList[ProfIndex(ID)].activeIsStudyPrimed = false;
+    ProfList[ProfIndex(ID)].activeDeclaredAction = 'none';
+    ProfList[ProfIndex(ID)].activeDemoralizeCounter = 0;
+    ProfList[ProfIndex(ID)].activetype = 'none';
+    ProfList[ProfIndex(ID)].activeLevel = 'none';
+    ProfList[ProfIndex(ID)].activeCard = 'no active card';
+    ProfList[ProfIndex(ID)].activeOnNextAttack = 'none';
+    ProfList[ProfIndex(ID)].activeAlternativeAttackModType = 'none';
+    ProfList[ProfIndex(ID)].activeAlternativeDamageMod = 'none';
+    ProfList[ProfIndex(ID)].activeDisarmCounter = 0;
+
+}
+
+export default ResetFromDuel
